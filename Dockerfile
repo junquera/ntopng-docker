@@ -1,7 +1,9 @@
 FROM ubuntu:16.04
 MAINTAINER Javier Junquera <javier.junquera.sanchez@gmail.com>
 
-WORKDIR /ntop
+ENV WORKDIR /ntop
+
+WORKDIR ${WORKDIR}
 
 RUN apt-get update && \
   apt-get install -y \
@@ -42,11 +44,13 @@ RUN git clone https://github.com/ntop/ntopng.git ntopng && cd ntopng && git rese
 COPY Makefile .
 
 RUN make
-# TODO make install
 
 RUN ["chmod", "+x", "ntopng/ntopng"]
 
-EXPOSE 5556
 COPY start.sh .
 
-ENTRYPOINT ["/ntop/start.sh"]
+RUN ["chmod", "+x", "start.sh"]
+
+EXPOSE 3000
+
+ENTRYPOINT ${WORKDIR}"/start.sh"
