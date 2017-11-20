@@ -1,5 +1,7 @@
 # ntopng-docker
 
+Docker for running [ntopng](https://github.com/ntop/ntopng)
+
 ## Build
 
 ```
