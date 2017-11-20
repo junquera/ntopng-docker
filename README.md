@@ -1,4 +1,4 @@
-# docker-ntopng
+# ntopng-docker
 
 ## Build
 
