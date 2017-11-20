@@ -14,6 +14,12 @@ docker build -t ntopng .
 docker run --net=host -t -p 3000:3000 ntopng
 ```
 
+or from docker hub...
+
+```
+docker run --net=host -t -p 3000:3000 junquera/ntopng
+```
+
 ## Cloning the repos
 
 Why have I specified the commits when cloning the repos?
