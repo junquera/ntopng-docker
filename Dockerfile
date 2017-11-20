@@ -43,6 +43,8 @@ RUN make
 
 RUN ["chmod", "+x", "ntopng/ntopng"]
 
-ENTRYPOINT cd ntopng && ./ntopng -r -i tcp://127.0.0.1:5556
-
 EXPOSE 5556
+
+COPY start.sh .
+
+ENTRYPOINT ["/ntop/start.sh"]
