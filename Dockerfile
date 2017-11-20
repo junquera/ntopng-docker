@@ -1,4 +1,6 @@
 FROM ubuntu:16.04
+MAINTAINER Javier Junquera <javier.junquera.sanchez@gmail.com>
+
 WORKDIR /ntop
 
 RUN apt-get update && \
@@ -34,6 +36,7 @@ RUN apt-get update && \
   && rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/ntop/nDPI.git nDPI && cd nDPI && git reset --hard d6176ff668504365674f8df04a36a2f35df2074b
+
 RUN git clone https://github.com/ntop/ntopng.git ntopng && cd ntopng && git reset --hard a974988973c1ff4a999bbf583310e40c46d86e2a
 
 COPY Makefile .
@@ -44,7 +47,6 @@ RUN make
 RUN ["chmod", "+x", "ntopng/ntopng"]
 
 EXPOSE 5556
-
 COPY start.sh .
 
 ENTRYPOINT ["/ntop/start.sh"]
