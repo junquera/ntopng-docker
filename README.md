@@ -10,11 +10,13 @@ docker build -t ntopng .
 
 ## Run
 
+### After building from source
+
 ```
 docker run --net=host -t -p 3000:3000 ntopng
 ```
 
-or from docker hub...
+### From docker hub...
 
 ```
 docker run --net=host -t -p 3000:3000 junquera/ntopng
