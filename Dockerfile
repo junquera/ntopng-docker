@@ -42,10 +42,10 @@ RUN apt-get update && \
   && rm -rf /var/lib/apt/lists/*
 
 # clone nDPI project with latest stable version
-RUN git clone https://github.com/ntop/nDPI.git nDPI && cd nDPI && git reset --hard d6176ff668504365674f8df04a36a2f35df2074b
+RUN git clone https://github.com/ntop/nDPI.git nDPI && cd nDPI && git reset --hard cf0682318953ea3e7abf48db8fd2b55900f77f78
 
 # clone ntopng project with latest stable version
-RUN git clone https://github.com/ntop/ntopng.git ntopng && cd ntopng && git reset --hard a974988973c1ff4a999bbf583310e40c46d86e2a
+RUN git clone https://github.com/ntop/ntopng.git ntopng && cd ntopng && git reset --hard fc5ac058603ff52864ab99739a15d2770528046e
 
 # copy a make script from local directory
 COPY Makefile .
