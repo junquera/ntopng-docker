@@ -1,4 +1,5 @@
 # ntopng-docker
+[![](https://img.shields.io/docker/pulls/junquera/ntopng.svg?style=plastic)](https://hub.docker.com/r/junquera/ntopng)
 
 Docker for running [ntopng](https://github.com/ntop/ntopng)
 
