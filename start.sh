@@ -4,4 +4,4 @@
 service redis-server start
 
 # start ntopng
-cd /ntop/ntopng && ./ntopng
+cd /ntop/ntopng && ./ntopng $CONFIG
