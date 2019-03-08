@@ -1,5 +1,7 @@
 # ntopng-docker
 [![](https://img.shields.io/docker/pulls/junquera/ntopng.svg?style=plastic)](https://hub.docker.com/r/junquera/ntopng)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/junquera/ntopng.svg)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/junquera/ntopng.svg)
 
 Docker for running [ntopng](https://github.com/ntop/ntopng)
 
