@@ -1,0 +1,12 @@
+version: '3.2'
+services:  
+    ntopng:
+        image: junquera/ntopng
+        container_name: ntopng
+        restart: unless-stopped
+        network_mode: host
+        volumes:
+        - ./ntopng.conf:/ntop/ntopng.conf:ro
+        environment:
+        - CONFIG=/ntop/ntopng.conf
+

@@ -24,3 +24,13 @@ docker run --net=host -t -p 3000:3000 ntopng
 ```
 docker run --net=host -t -p 3000:3000 junquera/ntopng
 ```
+
+## Custom configuration
+
+For adding aditional configuration there are two ways. First, by line arguments:
+
+```
+docker run --net=host -t -p 3000:3000 -e CONFIG=/ntop/ntopng.conf -v ./ntopng.conf:/ntop/ntopng.conf:ro junquera/ntopng
+```
+
+The other is through `docker-compose.yml` file.
